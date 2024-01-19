@@ -1,3 +1,9 @@
+const {
+  isNotEmpty,
+  isValidEmail,
+  isValidNumber,
+} = require("./questions-validate");
+
 const menuChoiceOptions = [
   {
     type: "list",
@@ -12,21 +18,25 @@ const managerQuestions = [
     type: "input",
     name: "name",
     message: "Enter the team manager's name:",
+    validate: isNotEmpty,
   },
   {
     type: "input",
     name: "id",
     message: "Enter the team manager's ID:",
+    validate: isValidNumber,
   },
   {
     type: "input",
     name: "email",
     message: "Enter the team manager's email address:",
+    validate: isValidEmail,
   },
   {
     type: "input",
     name: "officeNumber",
     message: "Enter the team manager's office number:",
+    validate: isValidNumber,
   },
 ];
 
@@ -41,11 +51,13 @@ const engineerQuestions = [
     type: "input",
     name: "id",
     message: "Enter the engineer's ID:",
+    validate: isValidNumber,
   },
   {
     type: "input",
     name: "email",
     message: "Enter the engineer's email address:",
+    validate: isValidEmail,
   },
   {
     type: "input",
@@ -66,11 +78,13 @@ const internQuestions = [
     type: "input",
     name: "id",
     message: "Enter the intern's ID:",
+    validate: isValidNumber,
   },
   {
     type: "input",
     name: "email",
     message: "Enter the intern's email address:",
+    validate: isValidEmail,
   },
   {
     type: "input",
