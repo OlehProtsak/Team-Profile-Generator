@@ -46,7 +46,9 @@ async function gatherTeamInfo() {
 
       const engineer = new Engineer(name, id, email, github);
       teamMembers.push(engineer);
-      console.log(`${engineer.getRole()} successfully added to your team!`);
+      console.log(
+        `${engineer.getRole()}: ${engineer.getName()}  successfully added to your team!`
+      );
       addTeamMember();
     } else if (userChoice === "Add an intern") {
       const { name, id, email, school } = await inquirer.prompt(
@@ -55,7 +57,9 @@ async function gatherTeamInfo() {
 
       const intern = new Intern(name, id, email, school);
       teamMembers.push(intern);
-      console.log(`${intern.getRole()} successfully added to your team!`);
+      console.log(
+        `${intern.getRole()}: ${intern.getName()} successfully added to your team!`
+      );
       addTeamMember();
     } else if (userChoice === "Finish building the team") {
       console.log("Team building complete!");
