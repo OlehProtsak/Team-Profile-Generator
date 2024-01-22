@@ -1,0 +1,31 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.team-heading {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.employee-card {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.list-group-item {
+  border: none;
+}
